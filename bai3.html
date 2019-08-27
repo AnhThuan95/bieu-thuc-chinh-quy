@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function countNumberOfVowel(str) {
+        let patt = /[ueoai]/ig;
+        let result = str.match(patt);
+        let count = result.length;
+        return count;
+    }
+    function countNumberOfConsonalt(str) {
+        let patt = /[a-z]/ig;
+        let result = str.match(patt);
+        let count = result.length;
+        return count - countNumberOfVowel(str);
+    }
+
+    let str = "This is a cat!";
+    console.log(countNumberOfVowel(str));
+    console.log(countNumberOfConsonalt(str));
+</script>
+
+</body>
+</html>

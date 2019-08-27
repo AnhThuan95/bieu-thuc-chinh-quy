@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function isStringDate(str) {
+        let patt = /^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/;
+        if (patt.test(str)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    let date = "12/05/1995";
+    console.log(isStringDate(date));
+
+    date = "12/5/1995";
+    console.log(isStringDate(date));
+</script>
+
+</body>
+</html>
